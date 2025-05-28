@@ -1,0 +1,39 @@
+{
+  "name": "build-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch",
+    "start": "webpack serve",
+    "build-css": "sass src/styles/main.scss dist/styles/main.css --no-source-map",
+    "dev": "npm run start && npm run build-css",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.{js,ts,css,scss,html,json}\"",
+    "check": "npm run lint && npm run format",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "sass": "^1.89.0"
+  }
+}
