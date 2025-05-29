@@ -1,5 +1,4 @@
 import tools from './tools.json';
-import moment from 'moment';
 
 export const handleToggleTheme = () => {
   document.body.classList.toggle('dark-theme');
@@ -32,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Display current year in the footer using moment
   const footer = document.querySelector('#footer-year');
   if (footer) {
-    footer.textContent = `© ${moment().format('YYYY')}`;
+    import('moment').then((moment) => {
+      footer.textContent = `© ${moment.default().format('YYYY')}`;
+    });
   }
 });
