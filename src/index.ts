@@ -1,4 +1,5 @@
 import tools from './tools.json';
+import moment from 'moment';
 
 export const handleToggleTheme = () => {
   document.body.classList.toggle('dark-theme');
@@ -6,6 +7,7 @@ export const handleToggleTheme = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const toolList = document.getElementById('tool-list');
+
   tools.forEach((tool) => {
     const listItem = document.createElement('li');
     const toolName = document.createElement('h3');
@@ -19,4 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle?.addEventListener('click', handleToggleTheme);
+
+  // Display current year in the footer using moment
+  const footer = document.querySelector('#footer-year');
+  if (footer) {
+    footer.textContent = `© ${moment().format('YYYY')}`;
+  }
 });
