@@ -20,7 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const themeToggle = document.getElementById('theme-toggle');
-  themeToggle?.addEventListener('click', handleToggleTheme);
+  themeToggle?.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-theme')) {
+      themeToggle.innerText = 'Dark Mode';
+    } else {
+      themeToggle.innerText = 'Light Mode';
+    }
+    handleToggleTheme();
+  });
 
   // Display current year in the footer using moment
   const footer = document.querySelector('#footer-year');
