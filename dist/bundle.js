@@ -21996,7 +21996,15 @@ document.addEventListener('DOMContentLoaded', () => {
         toolList === null || toolList === void 0 ? void 0 : toolList.appendChild(listItem);
     });
     const themeToggle = document.getElementById('theme-toggle');
-    themeToggle === null || themeToggle === void 0 ? void 0 : themeToggle.addEventListener('click', handleToggleTheme);
+    themeToggle === null || themeToggle === void 0 ? void 0 : themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.innerText = 'Dark Mode';
+        }
+        else {
+            themeToggle.innerText = 'Light Mode';
+        }
+        handleToggleTheme();
+    });
     // Display current year in the footer using moment
     const footer = document.querySelector('#footer-year');
     if (footer) {
