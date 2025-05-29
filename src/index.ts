@@ -1,5 +1,9 @@
 import tools from './tools';
 
+export const handleToggleTheme = () => {
+  document.body.classList.toggle('dark-theme');
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const toolList = document.getElementById('tool-list');
   tools.forEach((tool) => {
@@ -14,7 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const themeToggle = document.getElementById('theme-toggle');
-  themeToggle?.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-  });
+  themeToggle?.addEventListener('click', handleToggleTheme);
 });
