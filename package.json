@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests specified\"",
     "build": "webpack --watch",
     "start": "webpack serve",
     "build-css": "sass src/styles/main.scss dist/styles/main.css --no-source-map",

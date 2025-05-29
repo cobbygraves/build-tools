@@ -1,4 +1,4 @@
-import tools from './tools';
+import tools from './tools.json';
 
 export const handleToggleTheme = () => {
   document.body.classList.toggle('dark-theme');

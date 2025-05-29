@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Webpack",
+    "description": "Bundles JavaScript files and assets for deployment"
+  },
+  {
+    "name": "Babel",
+    "description": "Transpiles modern JavaScript to be compatible with older browsers"
+  },
+  {
+    "name": "Gulp",
+    "description": "Automates tasks like minification, compilation, and testing"
+  },
+  {
+    "name": "Grunt",
+    "description": "A task runner for automating repetitive tasks."
+  },
+  { "name": "Parcel", "description": "A zero-config web application bundler" },
+  {
+    "name": "Rollup",
+    "description": "Bundles JavaScript modules, especially for libraries."
+  }
+]
